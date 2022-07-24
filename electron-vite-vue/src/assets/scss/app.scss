@@ -1,0 +1,45 @@
+/* 全局样式 */
+
+@import 'globalcolor';
+@import 'globalsize';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin title-font-color {
+  color: $app-header-new-background-color;
+  font-size: $header-title-font-size;
+}
+
+@mixin sticky-style {
+  border: 1px solid $app-button-disable-background;
+  background-color: $app-crane-color;
+}
+
+@mixin icon-style {
+  background-color: $app-black-color;
+  border: 1px solid $app-button-disable-background;
+}
+
+@mixin droplist-style {
+  background-color: $app-crane-white;
+  border: 1px solid $app-gray-background-color;
+}
+
+@mixin label-style {
+  background-color: $app-crane-alpha-blue-title;
+  border: 1px solid $app-crane-alpha-blue-title;
+}
+
+@mixin blue-font-style {
+  font-size: $header-title-font-size;
+  color: $button-font-size;
+}
+
+@mixin gray-left-title {
+  font-size: $header-title-font-size;
+  color: $app-white-background-color;
+  font-weight: 800;
+}
