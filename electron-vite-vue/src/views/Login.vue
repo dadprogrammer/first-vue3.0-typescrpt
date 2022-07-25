@@ -37,7 +37,7 @@
       :model-value="dialogVisible"
       :before-close="handleClose"
       :close-on-click-modal="false">
-      <el-form :hide-required-asterisk="true" label-position="right" label-width="140px" size="middle" status-icon>
+      <el-form :hide-required-asterisk="true" label-position="right" label-width="140px" size="small" status-icon>
         <el-form-item label="IP地址">
           <el-input v-model="newIpAddress" placeholder="请输入IP地址"></el-input>
         </el-form-item>
@@ -58,20 +58,24 @@
 </template>
 
 <script lang="ts" setup>
- import {ref,reactive} from 'vue'
- import {transcode} from "buffer";
+ import type {Users} from  '@/datas/user'
+ import{ref,reactive,defineProps} from 'vue'
+ import type {PropType} from  'vue'
  // 父组件传来的值可以在这里接受
- //  const props = defineProps<{
- //      name:string,
- //      age:number,
- //      isStudent:boolean
- //    }>()
+
+ // defineProps({
+ //     titleInfo:{
+ //        type:Object as  PropType <Users>
+ //     },
+ //     required:true
+ // })
  let title = ref<string>('稀土钢冷轧原料库智能库房管理系统')
  let dialogVisible = ref<boolean>(false)
  let  newIpAddress = ref<string>('')
  let  newPort = ref<string>('')
  let testEnvironment = ref<boolean>(false)
  let versionName = ref<number>(10)
+ console.log(title)
  interface UserInfo{
    username:'',
    password:''
@@ -91,6 +95,12 @@
 
   }
   function  handleExit():void {
+
+  }
+  function  handleReloadPage():void {
+
+  }
+  function saveNewIpAddress():void {
 
   }
 
